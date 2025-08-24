@@ -1,0 +1,386 @@
+ 
+
+---HTML---
+
+- Hyper Text markup language
+
+- có 2 loại thẻ : 
+	+> inline
+	+> block
+
+- <em> : nham manh nội dung, in nghiêng
+
+- taget = "_blank" :  mở link trên cửa sổ mới
+
+- <iframe> : hiển thị 1 trang trong 1 trang web
+
+- <audio> : chèn 1 file audio
+
+- chèn video: <video controls>
+		<source src = "link.mp4" type ="video/mp4">
+	      </video>
+	+> controls: thuộc tính điều khiển, như là bật, tạm dừng, âm lượng.
+	+> loop: khi video kết thúc tự động lặp
+	+> autoplay: tự động phát video khi bật
+	+> muted: tắt tiếng
+
+- chèn audio: <audio controls>
+		<source src = "link.mp3" type="audio/mpeg">
+	      </audio>
+	+> controls: như video
+	+> loop
+	+> muted
+
+- 	text-decoration:none : loại bỏ gạch dưới thẻ a
+
+======================================Bài 4========================================================
+
+-Bộ chọn (Selectors) được chia làm 5 loại:
+	+> Simple (bộ chọn đơn giản): chọn chung (*), theo nhóm
+	+> Combinator (bộ chọn tổ hợp)
+	+> Pseudo - class (bộ chọn lớp giả)
+	+> Pseudo - elements (bộ bọn phần tử giả)
+	+> Attribute (bộ chọn thuộc tính)
+
+-Có 3 kiểu chèn CSS:
+	+> inline (nội tuyển) : viết trong thẻ
+	+> internal (nội bộ) : viết trong thẻ style
+	+> External (bên ngoài)
+
+=> nếu trùng bộ chọn va tên thuộc tính thi giá trị của bộ chọn 
+cuối cùng sẽ được sử dụng
+
+
+- font-size :  kích thước của dòng chữ
+
+*> background
+- background-color: chỉnh màu cho nền
+
+- background-image: chỉnh nền là ảnh : url()
+
+- background-size: chỉnh kích thước của nền ảnh: 
+	+> contain : tự co lại cho hình nền nằm gọn trong khung thẻ
+	+> cover: kéo dãn hình ảnh sao cho vừa với khung. Nếu thừa thì sẽ tự động cắt đi
+
+- background-repeat: nền được lặp lại hay không
+	+> no-repeat: không lặp lại ảnh
+	+> repeat-x: lặp lại theo trục x
+	+> repeat-y: lặp lại theo truc y
+
+- background-position: vị trí hình nên so với element (top right left bottom center)
+
+- background-attachment: nền sẽ được cuộn hoặc cố định
+	+> fixed: cố định
+
+* Box model (Mô hình hộp)
+		+> Content(nội dung): nội dung element + hình ảnh
+		+> Padding (phần đệm)
+		+> Border (đường viền)
+		+> margin (lề): kc giua cac element: mac dinh la 8px
+
+	- Các kiểu border - style: 
+		+> dotted: chấm
+		+> dashed: nét đứt
+		+> solid: liền
+		+> none: không có
+	
+	+> border-radius: bẻ cong từ vuông thành tròn
+- width + height: 
+	+> box-sizing: content-box; (mặc định) chỉ dùng trong phần content
+		. border-box: xét chiều dài , chiều cao là cả border.
+- min-width: là chiểu rộng tối thiểu mà element có thể có
+ 
+*> Text:
+	- text-align: căn lề: justify (căn đều 2 bên)
+	- text-transform: định dạnh chữ hoa chữ thường
+*> Fonts: fonts.google.com
+	-font-family: kiểu chữ
+	-font-style: normal, italic, oblique
+	-font-weight: độ dày của chữ
+	-font-size: độ lớn của cỡ chữ
+
+*>Icons
+ 	-Link:  https://fontawesome.com/search?o=r&m=free
+	-CDN: https://cdnjs.com/libraries/font-awesome
+
+=========================Bài 5=============================
+
+*> List(danh sách): 
+	- list-style-type: chỉ định kiểu đánh dấu mục danh sách
+		. disc: hình tròn đen: mặc định
+		. circle: hình tròn có viền đen
+		. square: hình vuông
+		. disclosure-closed: hình tam giác trỏ sang phải
+		. none: ẩn
+		. upper-roman: I,II,III
+		. lower-alpha: a,b,c
+	- list-style-position: chỉ định vị trí của các điểm trong danh sách
+		. inside: nằm trong
+		. outside: nằm ngoài
+*> Table
+
+	border-collapse: collapse; //hợp nhất lại các border lại với nhau
+	vertical-align: center; // viết ở chính giữa
+
+*> Display(Hien thi): 
+	- inline;  cùng 1 dòng: Không đặt được chiều rộng chiều cao, không thêm được padding-top, padding-bottom, margin-top,margin-bottom
+	- block;  mỗi dữ liệu ở 1 dòng, cho phép đặt chiều rộng chiều cao, cho phép ..............................
+	- inline-block; chiều rộng bằng chiều rộng của element, cho phép ......................
+	- none; ẩn
+
+*> Visibility: hiển thị
+	- hidden; // ẩn nhưng vẫn chiếm một khoảng trống
+	- visible; // Hiển thị, mặc định
+
+*> Position: vị trí : để xác định vị trí element muốn hiển thị
+	- static: mặc định của phần tử. các thuộc tính top bottom right left ko có hiệu lực
+	- relative: vị trí tương đối so với mặc định. Áp dụng đc top, bottom right left
+	- absolute:  mặc định top left: 0px (cach so voi phan tu box cha, va phan tu cha phai co position: relative)
+	- fixed: được định vị so với khung nhìn view ( luôn cố định khi trang được cuộn)
+	- sticky: sự kết hợp của relative  và fixed
+  
+		.Khi su dung static thi khi sử dụng left right top bottom cho element con thì nó sẽ ko ăn theo
+		element cha mà ăn theo element gần nhất khác element cha có position khác static
+
+*> Z-index: khong ap dung duoc khi position: static
+	- thuộc tính z-index thiết lập thứ tự xếp chồng nhau của một thành phần vị trí
+	- giá trị mặc định là 0
+	- z-index càng cao thì element càng nằm trên
+	
+*> overflow (tràn ra): xác định xem điều gì sẽ xảy ra khi 1 thành phần box tràn nội dung
+	- visible: khi box ko đủ chứa text, thì text vần hiển thị tràn qua box. (Mặc định)
+	- hidden: khi ko đủ chứa text, thì text tràn ra sẽ bị ẩn đi
+	- scroll: -------------------, ---------------------------- và xuất hiện thanh scroll, khi cuộn sẽ hiển thị text,
+		Sẽ xuất hiện cả thanh scroll ngang và dọc
+	- auto: ---------------------, thì thanh scroll sẽ tự động hiển thị.Nếu không thì sẽ ko hiển thị.
+
+*> white-space : nowrap  (chu viet dai khong bi xuong dong)
+
+*> Combinator selectors(Bộ chọn tổ hợp):
+	-Bộ chọn liền kề:
+		+> chọn thẻ tag2 được đặt cùng cấp vs tag1 và phải liền kề ngay sau thẻ tag1. Mỗi tag1 chỉ có 1 bộ chọn liền kề
+			tag1 + tag2{}
+	-Bộ chọn chung:
+		+> chọn tất cả phần tử tag2 cùng cấp với phần tử tag1, và những phần tử tag2 phải nằm sau tag1
+			tag1~tag2{}
+	-Bộ chọn con:
+		+> Chọn tất cả phần tử tag2 là cấp con đầu tiên của phần tử tag1
+			tag1>tag2{}
+	-Bộ chọn hậu duệ
+		+> chọn tất cả các phần tử tag2 bên trong tag1
+			tag1 tag2{}
+
+*> Pseudo-class (Bộ chọn lớp giả)
+	- dùng để xác ddinhj trạng thái đặc biệt của 1 element.
+	+ Cú pháp: 
+		selector:pseudo-class{
+			property:value;
+		}
+			:link: khi liên kết chưa được truy cập lần nào. chỉ dùng cho thẻ a
+			:visited: khi liên kêt đã được truy cập sau lần đầu tiên.Chỉ dùng cho thẻ a
+			:hover: khi di chuyển chuột lên element
+			:active: khi phần tử được click vao, áp dụng cho tất cả các thẻ
+			:first-child: thiết lập thuộc tính cho element đầu tiên
+			:last-child: thiết lập cho thuộc tính element cuối cùng
+			:nth-child(n): thiết lập cho cho thuộc tính element ở các vị trí n. N có thể là chẵn, lẽ,1 số, biểu thức(an+b)
+				(odd,even)
+*> Pseudo-elements (Bộ chọn phần tử giả)
+	- dùng để tạo ra 1 phần tử giả và định kiểu style cho phần tử giả đó mà không cần tạo ra 1 phần tử thật
+	+ Cú pháp:
+		selector::pseudo-element{
+			property: value;
+		}
+			::befor: chèn nội dung nào đó trc nội dung của mỗi element
+			::after
+			::first-letter: chọn chữ cái đầu tiên của mỗi element
+			::first-line: chọn chữ cái của dòng đầu tiên của mỗi element
+			::marker: chọn các điểm đánh dấu của các mục danh sách
+			::selection: được dùng để style cho một vùng văn bản được người dùng chọn(bôi đen)
+
+*>Opacity(độ mờ): giá trị từ 0-1;
+	- 0 thì mất hẳn
+	- Cú pháp: opacity: 0.4;
+ 	=========================================Bài 6===========================================
+*>float và clear
+	- float: là 1 thuộc tính được sử dụng để chuyển 1 phần tử sang góc trái hoặc góc phải của không gian
+		bao quanh nó 
+		+> left: bên trái
+		+> right: bên phải
+	- clear: ngăn chặn 1 thuộc tính chiếm không gian của phần tử kia
+		+> left: chặn trái
+		+> right: chặn phải
+		+> both: chặn cả 2 phía
+*> Attribute ( bộ chọn thuộc tính): được sử dụng để chọn các phần tử có thuộc tính chỉ định
+	- [attribute]: chọn tất cả các thuộc tính [];
+	- [attribute = "value"]: chọn tất cả các phần tử có thuộc tính [attribute] phải chứa giá trị value
+ 		+> Chỉ được chứa mỗi giá trị value. Nếu có thêm thuộc tính khác thì sẽ không được chọn
+		+> Giả trị có thể bao gồm nhiều từ
+	- [attribute ~= "value"]: chọn tất cả các phần tử có thuộc tính[] phải chứa giá trị value
+		+> nhưng value đó phải đứng độc lập, không được viết liền với từ khác
+		+> value phải là 1 khóa duy nhất
+	- [attribute |= "value"]: chọn tất cả các phần tử có thuộc tính [], giá trị có thể chính xác là giá trị được chỉ định hoặc 
+		giá trị được chỉ định theo dâu gạch nối (-)
+	- [attribute ^= "value"]: chọn tất cả các phần tử có thuộc tính [] và chọn tất cả các phần tử bắt đầu bằng value
+		+> không có ngoại lệ
+	-[attribute $= "value"]: chọn tất cả các phần tử có thuộc tính [] và kết thúc bằng giá trị value
+		+> giá trị có thể được viết liền
+
+*> Specificity (tính đặc hiệu)  và !important(quan trọng)
+	- Specificity: độ ưu tiên là cách mà trình duyệt quyết định sẽ áp dụng thuộc tính css nào với 1 phần tử khi có nhiều quy tắc
+		css cùng trỏ đến phần tử đó
+		+> Sự phân cấp tính đặc hiệu: Mỗi selector đều có vị trí của nó trong hệ thống phân cấp. Độ đặc hiệu của selector có 4 mucws
+			.inline
+			.id
+			.classs, attributes, pseudo-class
+			.elements, pseudo-element
+		+> Làm sao để tính toán tính đặc hiệu? Ta biểu diễn tương đối tính đặc hiệu của một selector như dưới đây, sau đó xem giá trị nào càng cao thì càng được ưu tiên:
+			.1-0-0-0: Inline styles
+			.0-X-0-0: Số lượng ID selector
+			.0-0-Y-0: Số lượng Classes, attributes và pseudo-classes
+			.0-0-0-Z: Số lượng Elements và pseudo-elements
+			.Viết CSS theo kiểu Internal và External không có độ ưu tiên.
+			.Universal selector (*) và combinators selector (+, >, ~) không làm tăng tính đặc hiệu.
+	- !important: Important được sử dụng để thay đổi thứ tự ưu tiên của CSS, khi một thuộc tính CSS nào đó được gán lệnh Important thì đồng nghĩa với việc nó sẽ có mức ưu tiên cao nhất.
+		 Nếu có nhiều thuộc tính cùng có !important thì lại quay về bài toán tính độ ưu tiên.
+*> Math functions(hàm toán học)
+	-calc();
+	-max();
+	-min();
+*> CSS function attr(): là 1 hàm css trả về giá trị của 1 thuộc tính
+	
+
+*> Biến (variablle)
+	
+ 	- Cú pháp:
+		+> Khai báo cục bộ:
+		
+ 		 	  h1{
+				--ten-bien: giá trị;
+		   		var(--ten-bien);
+			   }
+
+		+> Khai báo toàn cục: 
+			:root{
+				--ten-bien: giá trị;
+		   		var(--ten-bien);
+			}
+
+*> Box sizing :
+	- content-box: mặc định là xét chiều dài + chiều rộng cho phần content
+	- border-box: xét chiều dài, chiều cao là cả border, content, padding
+
+*> Responsive: là để chỉ một website có thể hiển thị tương thích trên mọi thiết bị
+
+	- Sử dụng media query để tạo responsive
+
+	- Khai báo:	
+		<meta name = 'viewport' contend = "width = device-width, inital-scale = 1.0">
+		
+			+> viewport: là khung hình mình nhìn thấy
+			+> width: đặt bằng chiều rộng của thiết bị
+			+> initial-scale=1.0: tỉ lệ zoom
+		<style>
+			@media screen and (max-width : 1024px){}
+			------------------------------ 768px
+			------------------------------ 480px
+			------------------------------ 320px
+		</style>
+	==================================Bài 7==========================================
+
+*> Flexbox: layout là 1 kiểu bố cục có khả năng
+	- tự cân đối kích thước
+	- Thay đổi chiều rộng/ chiều cao
+	- Thay đổi thứ tự phần tử
+	
+	- có 2 thành phần:
+		+> container: là phần tử cha bọc bên ngoài
+		+> item: là phần tử con của container
+
+	-Sơ đồ cấu trúc FlexBox:
+		+>cross start: ở trên (1)
+		+>cross end: ở dưới (2)
+		+> cross axis: vuông góc vs main axis
+		+> main start: trái (3)
+		+> main end: phải (4)
+		+> main axis: trục ngang
+
+	- Cấc thuộc tính của Flex:
+		+> display: muốn dùng những cái dưới thì phải có cái này
+			.flex: các element ở cùng 1 dòng, chiều rộng full
+			.inline-flex: các elemet ở cùng 1 dòng, chiều rộng bằng chiều rộng của các element
+		+> flex-direction: xác định hướng của main-axis để container sắp xếp lại các item
+			.row : mặc định: được sắp xếp từ trái qua phải
+			.row-reverse: được sắp xếp từ phải qua trái
+			.column: được sắp xếp theo chiều dọc từ trên xuông dưới
+			.column-reverse: ngược lại từ dưới lên trên
+
+		+> flex-wrap: cho phép item có tự động xuống dòng hay không khi kích thước container thay đổi
+			. nowrap: mặc định, các item nằm trên 1 dòng
+			. wrap: khi tổng chiều rộng các item lớn hơn chiều rộng của container thì sẽ tự động xuống dòng
+			. wrap-reverse: ngược lại
+		+> justify-content: để điều chỉnh vị trí bắt đầu và cẳn chỉnh các item theo truc main-axis
+			. flex-start: mặc định, item bắt đầu từ lề chính main-start của container
+			. flex-end: bắt đầu từ main-end 
+			. center: căn ra giữa
+			. space-between: item đầu tiên và cuối cùng luôn luôn  sát với lề, cách đều nhau
+			. space-around: như around nhưng kc giữa item vs lề bằng 1/2 kc của item vs item
+			. space-evenly: kc giua cac item va le bang nhau
+		+> align-items: điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục cross-axis. dùng để căn chỉnh cho từng dòng một
+			.stretch: Mặc đinh: các item có chiều cao bằng chiều cao của container. Nhưng sẽ ưu tiên chiều cao của item nếu có
+			.flex-start: căn theo trục cross-axis
+			.flex-end: bắt đầu từ lề cross-end của container
+			.center: item sẽ căn theo giữa của trục cross-axis
+
+		+>align-content: 
+			. căn chỉnh cho nhiều dòng
+			. stretch.
+			. flex-start
+			. flex-end
+			. center
+			. space-between: khoảng cách giữa các item bằng nhau. Item dầu tiên và cuối cùng sát với lề (nhưng đây theo truc cross axis)
+			. space-around:
+			. space-evenly: khoảng cách giữa item vs item = item vs lề
+		.align-self: tương tự như align-items nhưng áp cụng cho 1 item nào đó
+			.auto: mặc định
+			.stetch
+			. flex-start
+			. flex-end
+			. center
+	*> order: càng nhỏ càng nằm trên
+
+
+
+
+----------------------------------------BOOTRAP-------------------------
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+	integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+	integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+	crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*> Mô hình bàn có ngăn xếp
+	- Tạo nghiêng:
+		+> Thân bàn: 
+			. Mặt bàn : (1.2, 0.02, 0.6);
+			. Chân 	: (0.05 , 0.8, 0.05);
