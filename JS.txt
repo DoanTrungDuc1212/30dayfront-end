@@ -1,0 +1,5 @@
+
+
+
+ this.parentElement: lấy ra phần tử cha của phần tử element đó
+ this.parentElement.classList.toggle('open'): tạo thêm class open tại phần tử cha
